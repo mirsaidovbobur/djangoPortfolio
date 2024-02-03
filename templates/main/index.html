@@ -1,0 +1,474 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="{% static 'images/favicon.png' %}">
+    <title>Portfolio Bobur</title>
+
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,500i,700,900&amp;display=swap"
+          rel="stylesheet">
+    <!-- end font -->
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fakeLoader.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+
+<body>
+
+<!-- loader -->
+<div class="fakeLoader"></div>
+<!-- loader -->
+
+<!-- header -->
+<header id="home">
+
+    <!-- navbar -->
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+
+            <!-- navbar brand or logo -->
+            <a href="#" class="navbar-brand">
+                <h2>BOBUR</h2>
+            </a>
+            <!-- end navbar brand or logo -->
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo"
+                    aria-controls="navbarTogglerDemo" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div id="navbarTogglerDemo" class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a href="#home" class="nav-link">Asosiy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">Man haqimda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#resume" class="nav-link">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#portfolio" class="nav-link">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#blog" class="nav-link">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Aloqa</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- end navbar -->
+
+    <!-- home intro -->
+    <div class="home-intro segments">
+        <div class="container">
+            <div class="intro-content box-content">
+                <div class="row justify-content-center">
+                    <div class="col-md-8 col-sm-12 col-xs-12">
+                        <div class="intro-caption">
+                            <span>I am Mirsaidov Bobur</span>
+                            <h2>PYTHON Back-and Developer</h2>
+                            <button class="button"><a href="#contact">Man bilan aloqa</a></button>
+                            {#                                <button class="button">Contact Me</button>#}
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12 col-xs-12">
+                        <div class="intro-image">
+                            <img src="{% static 'images/IMG_3363.JPG' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end home intro -->
+
+</header>
+<!-- end header -->
+
+<!-- about -->
+<div id="about" class="about segments">
+    <div class="container">
+        <div class="box-content">
+            <div class="row">
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                    <div class="content-left">
+                        <div class="section-title section-title-left">
+                            <h3>Man Haqimda</h3>
+                        </div>
+                        <div class="content">
+                            <h2>Men Back-and Developer</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut doloremque ratione
+                                perferendis possimus voluptatibus distinctio
+                                autem expedita qui unde modi impedit officia illum praesentium amet, vero quos natus
+                                veritatis totam!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                    <div class="content-right"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end about -->
+
+<!-- resume -->
+<div id="resume" class="resume segments">
+    <div class="container">
+        <div class="box-content">
+            <div class="section-title">
+                <h3>Mening Resumeyim</h3>
+            </div>
+            <div class="owl-carousel owl-theme">
+                <div class="content">
+                    <!-- my experience -->
+                    <div class="row ">
+                        <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="content-left">
+                                <div class="title-resume">
+                                    <h3>Tajriba</h3>
+                                    <h2>Tajribaga ega<br><span>Back-end Developer</span></h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="content-right">
+                                <ul class="timeline">
+                                    {% for i in experience %}
+                                        <li>
+                                            <h4>{{ i.name }}</h4>
+                                            <span>{{ i.text }}</span>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end my experience -->
+                </div>
+                <div class="content">
+                    <!-- my education -->
+                    <div class="row ">
+                        <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="content-left">
+                                <div class="title-resume">
+                                    <h3>Ta'lim</h3>
+                                    <h2>Bir necha yilda o'rganish tajribasi<span>Professional universitetlar</span></h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="content-right">
+                                <ul class="timeline">
+                                    {% for i in education %}
+                                        <li>
+                                            <h4>{{ i.name }}</h4>
+                                            <span>{{ i.text }}</span>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end my education -->
+                </div>
+                <div class="content">
+                    <!-- my skill -->
+                    <div class="my-skill">
+                        <div class="row ">
+                            <div class="col-md-6 col-sm-12 col-xs-12">
+                                <div class="content-left">
+                                    <div class="title-resume">
+                                        <h3>Mahorat</h3>
+                                        <h2>Yaxshilik bilan <span>Shaxsiy</span> va <span>Professional mahorat</span>
+                                        </h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12 col-xs-12">
+                                <div class="content-right">
+                                    <div id="accordionSkill" class="accordion">
+                                        <div class="card">
+                                            <div id="personalSkill" class="card-header">
+                                                <h2>
+                                                    <button class="btn btn-link" type="button" data-toggle="collapse"
+                                                            data-target="#collapse1" aria-expanded="true"
+                                                            aria-controls="collapse1">
+                                                        <i class="fas fa-circle"></i>Shaxsiy mahorat
+                                                    </button>
+                                                </h2>
+                                            </div>
+
+                                            <div id="collapse1" class="collapse collapse-show"
+                                                 aria-labelledby="personalSkill" data-parent="#accordionSkill">
+                                                <div class="card-body">
+                                                    <ul class="personalSkill">
+                                                        {% for i in personalskill %}
+                                                            <li>
+                                                                <div class="skill-title">
+                                                                    <span>{{ i.name }}</span>
+                                                                </div>
+                                                                <div class="progress">
+                                                                    <div class="progress-bar" role="progressbar"
+                                                                         aria-valuenow="{{ i.number }}"
+                                                                         aria-valuemin="0"
+                                                                         aria-valuemax="100"
+                                                                         style="width: {{ i.number }}%"></div>
+                                                                </div>
+                                                            </li>
+                                                        {% endfor %}
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="card">
+                                            <div id="proSkill" class="card-header">
+                                                <h2>
+                                                    <button class="btn btn-link collapsed" type="button"
+                                                            data-toggle="collapse" data-target="#collapse2"
+                                                            aria-expanded="false" aria-controls="collapse2">
+                                                        <i class="fas fa-circle"></i>Professional mahorat
+                                                    </button>
+                                                </h2>
+                                            </div>
+
+                                            <div id="collapse2" class="collapse" aria-labelledby="proSkill"
+                                                 data-parent="#accordionSkill">
+                                                <div class="card-body">
+                                                    <ul class="pro-skill">
+                                                        {% for i in profisionalskill %}
+                                                            <li>
+                                                                <div class="skill-title">
+                                                                    <span>{{ i.name }}</span>
+                                                                </div>
+                                                                <div class="progress">
+                                                                    <div class="progress-bar" role="progressbar"
+                                                                         aria-valuenow="{{ i.number }}"
+                                                                         aria-valuemin="0"
+                                                                         aria-valuemax="100"
+                                                                         style="width: {{ i.number }}%"></div>
+                                                                </div>
+                                                            </li>
+                                                        {% endfor %}
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end my skill -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end resume -->
+
+<!-- portfolio -->
+<div id="portfolio" class="portfolio segments">
+    <div class="container">
+        <div class="box-content">
+            <div class="section-title">
+                <h3>Mening Portfolioim</h3>
+            </div>
+            <div class="portfolio-filter-menu">
+                <ul>
+                    <li data-filter="all" class="active">
+                        <span>Barchasi</span>
+                    </li>
+                    {% for i in  categoriya %}
+                        <li data-filter="{{ i.id }}" class="active">
+                            <span>{{ i.name }}</span>
+                        </li>
+                    {% endfor %}
+
+
+                </ul>
+            </div>
+
+            <div class="row no-gutters filtr-container">
+                {% for i in portfolio %}
+                    <div class="col-md-4 col-sm-12 col-xs-12 filtr-item" data-category="{{ i.categoriya_id }}">
+                        <div class="content-image">
+                            <a href="{{ i.img.url }}" class="portfolio-popup">
+                                <img src="{{ i.img.url }}" alt="">
+                                <div class="image-overlay"></div>
+                                <div class="portfolio-caption">
+                                    <div class="title">
+                                        <h4>{{ i.name }}</h4>
+                                    </div>
+                                    <div class="subtitle">
+                                        <span>{{ i.link }}</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end portfolio -->
+
+<!-- blog -->
+<div id="blog" class="blog segments">
+    <div class="container">
+        <div class="section-title">
+            <h3>Mening Blogim</h3>
+        </div>
+        <div class="row">
+            {% for i in blog %}
+                <div class="col-md-6">
+                    <div class="content">
+                        <div class="image">
+                            <img src="{{ i.img.url }}" alt="">
+                        </div>
+                        <div class="blog-title">
+                            <h4><a href="#">{{ i.name }}</a></h4>
+                            <div class="date">
+                                {{ i.data }}<i class="fas fa-circle"></i> <a href="#"><span>{{ i.title }}</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<!-- end blog -->
+
+<!-- contact -->
+<div id="contact" class="contact segments">
+    <div class="container">
+        <div class="box-content">
+            <div class="row">
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                    <div class="content-left">
+                        <div class="section-title section-title-left">
+                            <h3>Bog'lanish'</h3>
+                        </div>
+                        <h2>Bizga Bog'nish</h2>
+                        <ul>
+                            <li>
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fab fa-dribbble"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fab fa-google"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                    <div class="content-right">
+{#                        <form action="{% url 'post' %}" method="post" enctype="multipart/form-data">#}
+{#                            {% csrf_token %}#}
+{#                            <input type="text" name="title" id="id_title">#}
+{#                            <input type="text" name="name" id="id_name">#}
+{#                            <input type="text" name="email" id="id_email">#}
+{#                            <input type="text" name="subject" id="id_subject">#}
+{#                            <input type="text" name="text" id="id_text">#}
+{#                            <input type="text" name="number" id="id_number">#}
+{#                            <button class="button" type="submit" >Jo'natish</button>#}
+{#                        </form>#}
+                        <form action="{% url 'post' %}" method="post" enctype="multipart/form-data">
+                            {% csrf_token %}
+
+
+                            <div class="row">
+                                <div class="col">
+                                    <div id="name">
+                                        <input type="text" placeholder="Ism" class="form-control"
+                                               id="id_name" name="name">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div id="id_title">
+                                        <input type="text" placeholder="Familya" class="form-control"
+                                               id="id_title" name="title">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div id="id_email">
+                                        <input type="email" placeholder="Email " class="form-control"
+                                               id="id_email" name="email">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div id="id_subject">
+                                        <input type="text" placeholder="Ishi" class="form-control"
+                                               id="id_subject" name="subject">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div id="id_number">
+                                        <input type="text" placeholder="Telefon raqam" class="form-control"
+                                               id="id_number" name="number">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div id="id_text">
+                                        <textarea cols="30" rows="8" class="form-control" id="id_text"
+                                                  name="text" placeholder="xabarlar"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="button" type="submit">Jo'natish</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end contact -->
+
+
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/fakeLoader.min.js' %}"></script>
+<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'js/jquery.filterizr.min.js' %}"></script>
+<script src="{% static 'js/imagesloaded.pkgd.min.js' %}"></script>
+<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+<script src="{% static 'js/contact-form.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+
+
+</body>
+
+</html>
